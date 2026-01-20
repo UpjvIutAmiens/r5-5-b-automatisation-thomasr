@@ -1,5 +1,9 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html
+  head
+    title File Upload
+  body
+    h1 Upload File to Python Service
+    form(action="/upload", method="POST", enctype="multipart/form-data")
+      input(type="file", name="myfile")
+      button(type="submit") Send to Treatment
